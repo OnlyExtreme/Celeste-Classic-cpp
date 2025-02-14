@@ -16,7 +16,7 @@ public:
 class Hair {
 public:
     void createHair(GameObject& obj);      // Create hair object?
-    void setHairColor();    // Set hair color based on dJump
+    void setHairColor(int djump);    // Set hair color based on dJump
     void updateHair(GameObject& obj, int iniVal);  // Update hair
     void drawHair();    // Draw the hair of the player depending on the direction
     void unsetHairColor();      // Don't know wtf does this do...

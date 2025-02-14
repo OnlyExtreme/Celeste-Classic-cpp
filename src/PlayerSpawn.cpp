@@ -1,5 +1,7 @@
 #include "PlayerSpawn.h"
 
+extern int MAX_D_JUMP;
+
 PlayerSpawn::PlayerSpawn(float x, float y) {
     // TODO: Play sound effect
     position = {x, 128};
@@ -49,7 +51,10 @@ void PlayerSpawn::update(float deltaTime) {
 }
 
 void PlayerSpawn::draw(sf::RenderWindow& window) {
-
+    hair.setHairColor(MAX_D_JUMP);
+    hair.drawHair();
+    // Draw Sprite
+    hair.unsetHairColor();
 }
 
 

@@ -11,7 +11,7 @@ void Hair::createHair(GameObject& obj) {
 }
 
 
-void Hair::setHairColor() {
+void Hair::setHairColor(int djump) {
     // LUA: pal(...) Color Palette Choice in pico-8?
     // TODO: Implement this in SFML
 }

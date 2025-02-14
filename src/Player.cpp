@@ -9,6 +9,7 @@ const sf::Keyboard::Key KEY_UP = sf::Keyboard::Key::Up;
 const sf::Keyboard::Key KEY_DOWN = sf::Keyboard::Key::Down;
 const sf::Keyboard::Key KEY_JUMP = sf::Keyboard::Key::X;
 const sf::Keyboard::Key KEY_DASH = sf::Keyboard::Key::C;
+int MAX_D_JUMP;
 
 // Construction of Player, initialting data
 Player::Player() {
