@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "utils.h"
 #include <math.h>
+#include <algorithm>
 
 const sf::Keyboard::Key KEY_LEFT = sf::Keyboard::Key::Left;
 const sf::Keyboard::Key KEY_RIGHT = sf::Keyboard::Key::Right;
@@ -248,15 +249,11 @@ void Player::update(float deltaTime) {
 
     // WAS ON THE GROUND
     wasOnGround = onGround;
-}
 
-
-void Player::draw(sf::RenderWindow& window) {
-    // Clamp in screen
-    if (position.x < -1 || position.x > 121) {
-        position.x = clamp(position.x, -1.0f, 121.0f);
-        velocity.x = 0;
-    }
-
-    // TODO: Draw hair, draw sprite...
+    // Update Hair
+    // Initial Point depending on crouch
+    int iniVal = 3;
+    if (sf::Keyboard::isKeyPressed(KEY_DOWN))
+        iniVal = 4;
+    hair.updateHair(*this, iniVal);
 }

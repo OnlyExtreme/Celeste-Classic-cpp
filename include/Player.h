@@ -2,14 +2,16 @@
 #define PLAYER_H
 
 #include "GameObject.h"
+#include "Hair.h"
 #include <SFML/Graphics.hpp>
+
 
 class Player : public GameObject {
 public:
     Player();
-    void update(float deltaTime) override;
-    void draw(sf::RenderWindow& window) override;
-    static bool isSolid(int dx, int dy);
+    void update(float deltaTime) override;      // Update function called every tick
+    void draw(sf::RenderWindow& window) override;   // Draw function called every tick
+    static bool isSolid(int dx, int dy);    // Get the property of the map at (x+dx, y+dy)
     static bool isIce(int dx, int dy);
 
 private:
@@ -27,8 +29,8 @@ private:
     sf::Vector2i hitboxSize;    // The size of the hitbox
     float sprOff;     // Animation frames offset
     int spr;    // Index of sprite in sprite sheet
-    int direction;  // 1 for facing right, -1 for left
     bool wasOnGround;   // On ground last tick?
+    Hair hair;
 };
 
 #endif

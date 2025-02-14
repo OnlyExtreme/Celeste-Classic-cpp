@@ -14,6 +14,7 @@ public:
 
     bool isSolid = true;
     bool collideable = true;
+    int direction;
 };
 
 #endif
