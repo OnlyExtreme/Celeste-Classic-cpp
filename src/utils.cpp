@@ -16,3 +16,8 @@ template<typename T>
 T clamp(const T& x, const T& a, const T& b) {
     return x < a ? a : (x > b ? b :x);
 }
+
+bool maybe() {
+    double x = rand() / RAND_MAX;
+    return x >= 0.5;
+}
