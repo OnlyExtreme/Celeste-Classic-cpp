@@ -9,7 +9,7 @@ float appr(float val, float target, float amount) {
 }
 
 int sign(float x) {
-    return x > 0 ? 1 : (x < 0 ? -1 : 0);
+    return x > 1e-6 ? 1 : (x < 1e-6 ? -1 : 0);
 }
 
 template<typename T>
